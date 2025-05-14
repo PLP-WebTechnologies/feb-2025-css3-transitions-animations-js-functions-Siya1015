@@ -1,0 +1,122 @@
+/* When you hover over the button, it changes color and scales up smoothly */
+
+.hoverButton {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size:18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease,transform 0.2s ease-in-out;
+}
+
+.hoverButton:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
+}
+
+/* Hover over the box and see it expand and change color seamlessly */
+
+.box {
+    width: 100px;
+    height:100px;
+    background-color:#e74c3c;
+    transition: width 0.5s ease, height 0.5s ease, background-color 0.3s ease;  
+}
+
+.box:hover {
+    width:150px;
+    height:150px;
+    background-color:#8e44ad;
+}
+
+/* The ball bounces up and down continuously */
+
+.ball {
+    width:50px;
+    height:50px;
+    background-color:#f1c40f;
+    border-radius: 50%;
+    position:relative;
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+/* The spinner rotates endlessly while gently growing and shrinking */
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    border: 10px solid #e74c3c;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite, shrink-grow 3s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes grow-shrink {
+    0%, 100% {transform:scale(1);}
+    50% {transform:scale(1.5);}
+}
+
+/* Hover over the box to see it rotate slightly and pulse with color */
+
+.animatedBox {
+    width: 100px;
+    height: 100px;
+    background-color: #9b59b6;
+    transition: transform 0.3s ease;
+}
+
+.animatedBox:hover {
+    animation: color-change 1s ease infinite;
+    transform: rotate(20deg);
+}
+
+@keyframes color-change {
+    0% {background-color:#9b59b6;}
+    50% {background-color: #2ecc71;}
+    100% {background-color: #9b59b6;}
+}
+
+/* Button click to trigger animation */
+
+#boxx {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#boxx.animate {
+    opacity:1;
+    animation: moveRight 2s ease-in-out forwards;
+
+}
+
+@keyframes moveRight {
+    0% {transform: translateY(0);}
+    100% {transform:translateY(200px);}
+}
+
+#circle {
+    width: 50px;
+    height: 50px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    position:relative;
+}
+
